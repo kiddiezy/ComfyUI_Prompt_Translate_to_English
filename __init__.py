@@ -1,11 +1,4 @@
-# 2023年12月3日 修复 阿里云导入失败，但还可以使用百度云的问题。
-# try:
-#     from .nodes.aliapi import NODE_CLASS_MAPPINGS as aliapi_c, NODE_DISPLAY_NAME_MAPPINGS as aliapi_n
-# except ImportError:
-#   print('阿里云API导入失败')
-aliapi_c = {}
-aliapi_n = {}
-
+from .nodes.aliapi import NODE_CLASS_MAPPINGS as aliapi_c, NODE_DISPLAY_NAME_MAPPINGS as aliapi_n
 from .nodes.baiduapi import NODE_CLASS_MAPPINGS as baidu_c, NODE_DISPLAY_NAME_MAPPINGS as baiduapi_n
 from .nodes.baidu import NODE_CLASS_MAPPINGS as baiduapi_c, NODE_DISPLAY_NAME_MAPPINGS as baidu_n
 from .nodes.previewtext import NODE_CLASS_MAPPINGS as preview_c, NODE_DISPLAY_NAME_MAPPINGS as preview_n
@@ -29,11 +22,11 @@ import __main__
 import shutil
 
 # 获取js的文件路径
-BaiduTS_js_dir_path = os.path.dirname(os.path.relpath(__file__))
+BaiduTS_js_dir_path = os.path.dirname(os.path.abspath(__file__))
 BaiduTS_js_path = os.path.join(BaiduTS_js_dir_path, 'js')
 
 # 获取 web的文件夹路径 ---拼合 web -----获取文件夹路径 ----获取当前Comfyui的路径
-Comfyui_web_dir_path = os.path.join(os.path.dirname(os.path.relpath(__main__.__file__)), 'web')
+Comfyui_web_dir_path = os.path.join(os.path.dirname(os.path.abspath(__main__.__file__)), 'web')
 Comfyui_js_path = os.path.join(Comfyui_web_dir_path, 'extensions')
 
 # 节点名称

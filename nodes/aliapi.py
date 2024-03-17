@@ -1,27 +1,12 @@
 import json
-import sys
-import subprocess
-try:
-    import requests
-except ImportError:
-    subprocess.call(['pip', 'install', 'requests'], shell=True)
-    import requests
-try:
-    from alibabacloud_alimt20181012.client import Client as alimt20181012Client
-except ImportError:
-    subprocess.call(['pip', 'install', 'alibabacloud_alimt20181012'], shell=True)
-    from alibabacloud_alimt20181012.client import Client as alimt20181012Client
-try:
-    from alibabacloud_tea_console.client import Client as ConsoleClient
-except ImportError:
-    subprocess.call(['pip', 'install', 'alibabacloud_tea_console'], shell=True)
-    from alibabacloud_tea_console.client import Client as ConsoleClient
 
-from alibabacloud_tea_openapi import models as open_api_models
 from alibabacloud_alimt20181012 import models as alimt_20181012_models
+from alibabacloud_alimt20181012.client import Client as alimt20181012Client
+from alibabacloud_tea_openapi import models as open_api_models
 from alibabacloud_tea_util import models as util_models
-from alibabacloud_tea_util.client import Client as UtilClient
+
 from ..config import *
+
 
 class AlibabaTransApi:
     def __init__(self):
