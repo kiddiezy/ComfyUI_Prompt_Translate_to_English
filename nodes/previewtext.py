@@ -10,7 +10,7 @@ class PreviewText:
                 },
         }
 
-    RETURN_TYPES = ()
+    RETURN_TYPES = ("STRING",)
     INPUT_IS_LIST = True
     FUNCTION = "preview_text"
     OUTPUT_NODE = True
