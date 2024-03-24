@@ -1,20 +1,17 @@
 from .nodes.aliapi import NODE_CLASS_MAPPINGS as aliapi_c, NODE_DISPLAY_NAME_MAPPINGS as aliapi_n
 from .nodes.baiduapi import NODE_CLASS_MAPPINGS as baidu_c, NODE_DISPLAY_NAME_MAPPINGS as baiduapi_n
 from .nodes.baidu import NODE_CLASS_MAPPINGS as baiduapi_c, NODE_DISPLAY_NAME_MAPPINGS as baidu_n
-from .nodes.previewtext import NODE_CLASS_MAPPINGS as preview_c, NODE_DISPLAY_NAME_MAPPINGS as preview_n
 
 NODE_CLASS_MAPPINGS = {
     **aliapi_c,
     **baidu_c,
     **baiduapi_c,
-    **preview_c
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
     **aliapi_n,
     **baiduapi_n,
     **baidu_n,
-    **preview_n
 }
 
 import os
