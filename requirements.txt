@@ -1,1 +1,4 @@
-
+pyexecjs
+requests
+alibabacloud_alimt20181012
+alibabacloud_tea_console
