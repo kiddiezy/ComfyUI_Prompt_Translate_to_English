@@ -26,6 +26,8 @@ class AlibabaTransApi:
     CATEGORY = "提示词翻译"
 
     def alitranslationapi(self, choose_to_language, text):
+        if not text:
+            return ""
         access_key_id = ali_key_id
         access_key_secret = ali_key_secret
 
@@ -50,7 +52,7 @@ class AlibabaTransApi:
             print(translate_result)
         except Exception as e:
             print(e)
-            translate_result = "Translate failed"
+            translate_result = ""
 
         return translate_result,
 
